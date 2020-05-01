@@ -1,0 +1,165 @@
+#contact-social {
+    display: table;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 96% 100%, 4% 100%);
+    background-color: #211915;
+}
+
+#phone,
+#social {
+    width: 50%;
+    float: left;
+    padding: 5px 0;
+}
+
+ul.social,
+ul.phone {
+    list-style: none;
+    display: table;
+    margin: auto;
+    padding: 0;
+}
+
+ul.social li,
+ul.phone li{
+    display: table;
+    float: left;
+    padding: 0;
+    margin: 0 5px;
+}
+
+ul.social li:last-child {
+    border: 0;
+}
+
+ul.social li a,
+ul.phone li a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+ul.social li a:hover {
+    color: #edeef0;
+}
+
+ul.social li a i {
+    font-size: 28px;
+}
+
+ul.social li a span {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/*--------------------------------------------------*/
+/*Whatsapp ICON*/
+ul.contact-social li a.icon-whatsapp {
+    border-radius: 50%;
+    background-color: #73b967;
+    width: 30px;
+    display: table;
+    text-align: center;
+    margin-right: 5px;
+}
+
+ul.contact-social li a.icon-whatsapp i {
+    font-size: 22px;
+    margin-left: 1px;
+    line-height: 30px;
+    color: #00493B;
+}
+
+/*Whatsapp*/
+ul.contact-social li a.whatsapp span {
+    display: table;
+    padding-top: 5px;
+
+}
+
+/*Email*/
+ul.contact-social li a.email span {
+    display: table;
+    float: left;
+    padding-top: 5px;
+}
+
+ul.contact-social li a.email i {
+    color: #73b967;
+    display: table;
+    float: left;
+    margin-right: 5px;
+    padding-top: 2px;
+}
+
+/*--------------------------------------------------*/
+
+.moduletable-sociais #contact-social {
+    float: none;
+}
+
+.moduletable-sociais ul.contact-social {
+    margin: auto;
+}
+
+.moduletable-sociais ul.contact-social li a {
+    color: #dfdfdf;
+}
+
+.moduletable-sociais ul.contact-social li a:hover {
+    color: #FFF;
+}
+
+#contact-social .certificado {
+    float: left;
+    margin-right: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    ul.contact-social li a b {
+        display: none;
+    }
+
+    ul.contact-social li a.email span {
+        display: none;
+    }
+
+    ul.contact-social li a.icon-whatsapp i {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    ul.contact-social li a.icon-whatsapp {
+        width: 24px;
+    }
+
+    ul.contact-social li a.whatsapp span {
+        padding-top: 3px;
+        font-size: 16px;
+    }
+
+    ul.contact-social li a.email i {
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    ul.contact-social li a.icon-whatsapp i {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    ul.contact-social li a.icon-whatsapp {
+        width: 22px;
+        font-size: 0;
+    }
+
+    ul.contact-social li a.whatsapp span {
+        padding-top: 3px;
+        font-size: 14px;
+    }
+
+    ul.contact-social li a i {
+        font-size: 22px;
+    }
+}

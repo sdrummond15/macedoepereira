@@ -13,13 +13,6 @@ jQuery(document).ready(function ($) {
         $(this).on('scroll', function () {
             var topo = $(this).scrollTop();
 
-            //Redimensionando a Logo
-            if (topo > 100) {
-                $('#logo a img').width(220);
-            } else {
-                $('#logo a img').width(260);
-            }
-
             //Adicionando efeito serviços
             if($(window).height() < ($('#breadcrumbs').height() * 1.7)) {
                 if ((topo + ($(window).height() * 0.7)) > jQuery('#services').offset().top) {
