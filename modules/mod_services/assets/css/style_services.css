@@ -1,0 +1,96 @@
+#modservices {
+    width: 100%;
+    display: table;
+}
+
+#services {
+    width: 1170px;
+    display: table;
+    margin: 60px auto 0px auto;
+    text-align: center;
+}
+
+#services h1{
+    font-size: 36px;
+    font-family: 'Raleway';
+    color: #FFF;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+#services .service {
+    display: inline-table;
+    vertical-align: bottom;
+    width: calc(25% - 30px);
+    margin: 0 15px;
+    background-size: cover;
+    background-position: center;
+    text-shadow: 0 0 5px #000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#services .service a.img-service {
+    width: 100%;
+    height: 100%;
+    display: table;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #FFF;
+    font-size: 24px;
+    opacity: 0;
+    transition: 300ms all;
+}
+
+#services .service a.img-service:hover {
+    opacity: 1;
+}
+
+#services .service a.img-service span {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 1200px) {
+    #services{
+        width: 96%;
+    }
+    #services .service {
+        width: calc(25% - 10px);
+        margin: 0 5px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #services .service {
+        width: calc(50% - 20px);
+        max-width: 320px;
+        margin: 0 10px 30px 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #modservices {
+        margin-bottom: 10px;
+    }
+
+    #services .service {
+        width: calc(50% - 10px);
+        margin: 0 5px 20px 5px;
+    }
+
+    #services .service {
+        width: 100%;
+        max-width: 240px;
+        float: none;
+    }
+    #services .service a.img-service{
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #services .service {
+        max-width: 200px;
+    }
+}

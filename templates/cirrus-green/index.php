@@ -17,6 +17,14 @@ $logo = $this->params->get('logo', $logopath);
 $logoimage = $this->params->get('logoimage');
 $sitetitle = $this->params->get('sitetitle');
 $sitedescription = $this->params->get('sitedescription');
+
+$menu = $app->getMenu();
+$lang = JFactory::getLanguage();
+$home = 0;
+if ($menu->getActive() == $menu->getDefault($lang->getTag())) {
+    $home = 1;
+}
+
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
@@ -37,6 +45,29 @@ $sitedescription = $this->params->get('sitedescription');
 <body>
 
     <div id="wrapper">
+
+        <div id="mainmenu_wrap">
+            <div id="mainmenu">
+
+                <div id="mainmenu_menu">
+                    <jdoc:include type="modules" name="position-1" />
+                </div>
+
+                <div id="respmenu_wrap">
+                    <div class="gotomenu">
+                        <div id="gotomenu">
+                            <i class="fa fa-bars smallmenu" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="menuresp">
+                <jdoc:include type="modules" name="position-1" />
+            </div>
+
+        </div>
 
         <div id="header_wrap">
             <div id="header">
@@ -64,18 +95,6 @@ $sitedescription = $this->params->get('sitedescription');
                     <?php endif; ?>
                 </div>
 
-                <div id="respmenu_wrap">
-                    <div class="gotomenu">
-                        <div id="gotomenu">
-                            <i class="fa fa-bars smallmenu" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="menuresp">
-                <jdoc:include type="modules" name="position-1" />
             </div>
 
         </div>
@@ -103,7 +122,7 @@ $sitedescription = $this->params->get('sitedescription');
         <?php endif; ?>
 
         <!-- Content/Menu Wrap -->
-        <div id="content-menu_wrap_bg">
+        <div id="content-menu_wrap_bg" <?= ($home == 1) ? 'class="back-home"' : '' ?>>
             <div id="content-menu_wrap">
 
                 <!-- Left Menu -->
