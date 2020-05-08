@@ -49,6 +49,21 @@ if ($menu->getActive() == $menu->getDefault($lang->getTag())) {
         <div id="mainmenu_wrap">
             <div id="mainmenu">
 
+                <!-- Logo -->
+                <div id="logo">
+                    <?php if ($logo && $logoimage == 1) : ?>
+                        <a href="<?php echo $this->baseurl ?>"><img src="<?php echo htmlspecialchars($logo); ?>" alt="<?php echo $sitename; ?>" /></a>
+                    <?php endif; ?>
+                    <?php if (!$logo || $logoimage == 0) : ?>
+                        <?php if ($sitetitle) : ?>
+                            <a href="<?php echo $this->baseurl ?>"><?php echo htmlspecialchars($sitetitle); ?></a><br />
+                        <?php endif; ?>
+                        <?php if ($sitedescription) : ?>
+                            <div class="sitedescription"><?php echo htmlspecialchars($sitedescription); ?></div>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                </div>
+
                 <div id="mainmenu_menu">
                     <jdoc:include type="modules" name="position-1" />
                 </div>

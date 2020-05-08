@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @package     Joomla.Site
  * @subpackage  mod_article_single
@@ -15,30 +16,34 @@ if ($params->get('moduleclass_sfx')) {
 }
 ?>
 <div id="article-home" class="article-home<?php echo $sufixo; ?>">
-    <?php foreach ($article as $article): ?>
+    <?php foreach ($article as $article) : ?>
         <div class="article-home">
             <div class="description">
-                <h1>
-                    <?= $article->title ?>
-                </h1>
+                <div id="image-title">
+                    <a href="<?php echo JRoute::_("index.php?Itemid={$link}"); ?>">
+                        <img src="<?= $image_title ?>" alt="<?= $article->title ?>" />
+                    </a>
+                </div>
+                <div id="image-intro">
+                    <a href="<?php echo JRoute::_("index.php?Itemid={$link}"); ?>">
+                        <img src="<?= $image_intro ?>" alt="<?= $article->title ?>" />
+                    </a>
+                </div>
                 <div class="text-description">
                     <?php
                     $start = strpos($article->introtext, '<p>');
                     $end = strpos($article->introtext, '</p>', $start);
-                    $paragraph = substr($article->introtext, $start, $end-$start+4);
+                    $paragraph = substr($article->introtext, $start, $end - $start + 4);
                     ?>
                     <?= $paragraph ?>
-                    <a class="btn-simple btn-linkpage" href="<?php echo JRoute::_("index.php?Itemid={$link}"); ?>">
-                        <?= $button_link ?>
-                    </a>
                 </div>
             </div>
         </div>
     <?php endforeach; ?>
 </div>
 <script>
-    jQuery('document').ready(function ($) {
-        $(window).on('resize', function () {
+    jQuery('document').ready(function($) {
+        $(window).on('resize', function() {
             $('#article-home .destination').height(parseInt($('#article-home .destination').width() * 0.6));
             $('#article-home .description').height($('#article-home .all-destination').height());
         }).trigger('resize');

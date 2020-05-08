@@ -21,6 +21,17 @@
     <config>
         <fields name="params">
             <fieldset name="basic">
+
+                <field
+                        name="image_title"
+                        type="media"
+                        label="Imagem Título"
+                />
+                <field
+                        name="image_intro"
+                        type="media"
+                        label="Imagem Texto"
+                />
                 <field
                         name="article"
                         type="sql"
@@ -36,14 +47,7 @@
                         label="Link botão"
                         description="Selecione um item de menu para o botão"
                 />
-                <field
-                        name="button_link"
-                        type="text"
-                        label="Texto botão"
-                        default="Leia mais..."
-                        description="Informe a descrição do botão"
-                        filter="safehtml"
-                />
+                
             </fieldset>
 
             <fieldset

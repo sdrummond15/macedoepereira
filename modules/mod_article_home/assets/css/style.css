@@ -3,6 +3,31 @@
     display: table;
 }
 
+#image-title {
+    display: table;
+    margin: auto;
+}
+
+#image-title img {
+    width: 550px;
+    max-width: 80%;
+    margin-bottom: 30px;
+}
+
+#image-intro {
+    float: right;
+    margin: 0 0 0 20px;
+    width: 20%;
+}
+
+#image-intro img {
+    width: 100%;
+}
+
+#image-intro a:hover {
+    filter: contrast(200%);
+}
+
 .description {
     width: 1170px;
     display: table;
@@ -10,7 +35,7 @@
 }
 
 .description h1 {
-    color: #FFF;
+    color: #322b2a;
     text-align: center;
     font-size: 30px;
     text-transform: uppercase;
@@ -18,30 +43,5 @@
 }
 
 .text-description {
-    color: #FFF;
-}
-
-#article-home .btn-linkpage {
-    background: transparent;
-    float: right;
-    border: 1px solid #FFF;
-    border-radius: 0;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 3px 15px;
-    font-size: 14px;
-}
-
-#article-home .btn-linkpage span{
-    font-size: 24px;
-    display: table;
-    float: right;
-    line-height: 0;
-    padding-top: 8px;
-}
-
-
-#article-home .btn-linkpage:hover {
-    background-color: #FFF;
-    color: #081a30;
+    color: #322b2a;
 }

@@ -431,18 +431,18 @@ body {
     font-weight: normal;
     font-size: 18px;
     line-height: 1.4;
-    color: #000;
+    color: #322b2a;
     font-weight: 300;
     background-color: #eee8d9;
 }
 
 a {
-    color: #58595b;
+    color: #322b2a;
     text-decoration: none;
 }
 
 a:hover {
-    color: #888;
+    color: #58595b;
     text-decoration: none;
 }
 
@@ -681,14 +681,15 @@ textarea.inputbox {
 }
 
 /** Main menu**/
-#mainmenu_wrap{
+#mainmenu_wrap {
     opacity: 0;
     position: fixed;
-    top: -10%;
+    top: -500px;
     left: 0;
     width: 100%;
     display: table;
     background-color: #DACBAA;
+    z-index: 9999;
 }
 
 /** Topmenu (added multi-level support v1.1) **/
@@ -2057,9 +2058,8 @@ a.feed-link {
 #bottom_wrap {
     width: 100%;
     display: table;
-    background-color: #2f4c12;
-    clip-path: polygon(50% 100px, 100% 0, 100% 100%, 0 100%, 0 0);
-    padding-top: 80px;
+    background-image: url(../../../images/background.jpg);
+    background-size: cover;
 }
 
 /** Box/Banner/Links **/
