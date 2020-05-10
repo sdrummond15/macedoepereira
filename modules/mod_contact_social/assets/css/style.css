@@ -52,6 +52,26 @@ ul.social li a span {
     font-size: 18px;
 }
 
+ul.social li a.facebook,
+ul.social li a.linkedin {
+    line-height: 28px;
+    width: 28px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #FFF;
+    color: #211915;
+    display: table;
+}
+
+ul.social li a.facebook i {
+    font-size: 20px;
+}
+
+ul.social li a.linkedin i {
+    font-size: 18px;
+}
+
+
 /*--------------------------------------------------*/
 /*Whatsapp ICON*/
 ul.contact-social li a.icon-whatsapp {

@@ -23,11 +23,20 @@
                 </li>
             <?php endif; ?>
 
+            <!-- E-mail -->
+            <?php if (!empty($email)) : ?>
+                <li>
+                    <a href="mailto:<?php echo $email; ?>" target="_blank" class="email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </li>
+            <?php endif; ?>
+
             <!-- Facebook -->
             <?php if (!empty($facebook)) : ?>
                 <li>
                     <a href="<?php echo $facebook; ?>" target="_blank" class="facebook">
-                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-facebook-f"></i>
                     </a>
                 </li>
             <?php endif; ?>
@@ -63,16 +72,7 @@
             <?php if (!empty($linkedin)) : ?>
                 <li>
                     <a href="<?php echo $linkedin; ?>" target="_blank" class="linkedin">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </li>
-            <?php endif; ?>
-
-            <!-- E-mail -->
-            <?php if (!empty($email)) : ?>
-                <li>
-                    <a href="mailto:<?php echo $email; ?>" target="_blank" class="email">
-                        <i class="fas fa-envelope"></i>
+                        <i class="fab fa-linkedin-in"></i>
                     </a>
                 </li>
             <?php endif; ?>

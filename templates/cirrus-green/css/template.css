@@ -466,7 +466,6 @@ p {
 h1 {
     font-family: 'Roboto';
     font-size: 22px;
-    line-height: 1.15em;
     margin-bottom: 12px;
 }
 
@@ -661,6 +660,17 @@ textarea.inputbox {
     color: #fff;
 }
 
+#logomain {
+    float: left;
+    display: table;
+    margin: 5px 20px 0px 20px;
+}
+
+#logomain img {
+    height: 70px;
+    filter: brightness(0);
+}
+
 #topnav_wrap {
     width: 100%;
     display: table;
@@ -690,6 +700,19 @@ textarea.inputbox {
     display: table;
     background-color: #DACBAA;
     z-index: 9999;
+    transition: all 200ms;
+}
+
+#mainmenu_wrap.mainmenu-int {
+    opacity: 1;
+    position: relative;
+    top: 0;
+}
+
+#mainmenu {
+    width: 1170px;
+    margin: auto;
+    display: table;
 }
 
 /** Topmenu (added multi-level support v1.1) **/
@@ -699,6 +722,7 @@ textarea.inputbox {
     width: 100%;
     display: table;
     background-color: #DACBAA;
+    transition: all 300ms;
 }
 
 #topmenu {
@@ -935,6 +959,79 @@ textarea.inputbox {
 #header_wrap .menuresp li li.active a:hover {
     background-color: transparent;
     color: #FFF;
+}
+
+/** MAIN **/
+#mainmenu_menu {
+    clear: right;
+    float: right;
+}
+
+#mainmenu_menu ul {
+    margin: 10px 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+#mainmenu_menu ul li{
+    float: left;
+}
+
+#mainmenu_menu ul li a, 
+#mainmenu_menu ul li span {
+    font-size: 16px;
+    display: block;
+    color: #211915;
+    text-decoration: none;
+    padding: 3px 15px;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1;
+    border-radius: 0;
+    border-right: 1px solid #211915;
+}
+
+#mainmenu_menu ul li:last-child a, 
+#mainmenu_menu ul li:last-child span {
+    border: 0;
+}
+
+#mainmenu_menu li.active a, 
+#mainmenu_menu li.active span, 
+#mainmenu_menu li.active a:hover {
+    text-decoration: none;
+    color: #211915;
+    font-weight: 500;
+    background-color: transparent;
+}
+
+#mainmenu_menu a:hover {
+    color: #603c29;
+    background-color: transparent;
+}
+
+#mainheader-top #contact-social {
+    display: table;
+    width: auto;
+    clip-path: unset;
+    background-color: transparent;
+    float: right;
+}
+
+#mainheader-top #phone, 
+#mainheader-top #social {
+    width: auto;
+}
+
+#mainheader-top ul.social li a, 
+#mainheader-top ul.phone li a {
+    color: #322b2a;
+}
+
+#mainheader-top ul.social li a.facebook, 
+#mainheader-top ul.social li a.linkedin {
+    background-color: #322b2a;
+    color: #DACBAA;
 }
 
 /** Content/Menu Wrap **/
@@ -2045,7 +2142,7 @@ a.feed-link {
 .copyrightint p {
     text-align: center;
     font-size: 14px;
-    color: #FFF;
+    color: #322b2a;
 }
 
 .copyrightint a {
@@ -2074,37 +2171,44 @@ a.feed-link {
     margin: 60px auto 0 auto;
 }
 
-#box1,
+#box1 {
+    width: 100%;
+    display: table;
+}
 #box2,
 #box3 {
-    width: calc(33.33% - 20px);
+    width: calc(50% - 20px);
     display: table;
     float: left;
-    margin-right: 30px;
+    margin-right: 40px;
 }
 
 #box3 {
     margin-right: 0;
 }
 
-.moduletable-logo-menu-map {
+.moduletable-conheca {
     display: table;
     margin: auto;
 }
 
-.moduletable-menu-map ul {
-    padding: 0;
-    list-style: none;
-    margin: 30px 0 0 0;
+.moduletable-conheca h3{
     text-align: center;
+    border-bottom: 1px solid #322b2a;
+    text-transform: uppercase;
+    padding: 0 10px 3px 10px;
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
-.moduletable-menu-map ul li a {
-    color: #FFF;
+.moduletable-conheca h3::first-letter{
+    font-size: 30px;
 }
 
-.moduletable-menu-map ul li a:hover {
-    color: #52b5de;
+.moduletable-conheca p {
+    font-weight: 600;
+    text-align: center;
+    font-size: 20px;
 }
 
 /** Editor **/
