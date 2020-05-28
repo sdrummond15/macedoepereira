@@ -45,3 +45,20 @@
 .text-description {
     color: #322b2a;
 }
+
+
+@media screen and (max-width: 1024px) {
+    #image-intro {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #image-intro {
+        display: none;
+    }
+    #image-title img {
+        display: table;
+        margin: 0 auto 30px auto;
+    }
+}

@@ -136,6 +136,14 @@ ul.contact-social li a.email i {
 }
 
 @media screen and (max-width: 768px) {
+    ul.phone li a {
+        font-size: 16px;
+    }
+
+    ul.phone li a span {
+        vertical-align: sub;
+    }
+
     ul.contact-social li a b {
         display: none;
     }
@@ -164,6 +172,10 @@ ul.contact-social li a.email i {
 }
 
 @media screen and (max-width: 480px) {
+    ul.phone li {
+        display: none;
+    }
+
     ul.contact-social li a.icon-whatsapp i {
         font-size: 16px;
         line-height: 22px;

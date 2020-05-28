@@ -18,6 +18,10 @@ jQuery(document).ready(function ($) {
     });
 
     $(window).on('resize', function () {
+
+        $('.mainmenu-int').next('div').css('padding-top', $('.mainmenu-int #mainmenu').height());
+
+
         var menuresp = $(".gotomenu");
 
         $('.menuresp').css('top', $('#topmenu_wrap').outerHeight());
